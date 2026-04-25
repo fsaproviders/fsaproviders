@@ -91,8 +91,8 @@ jobs:
           rsync -avz --delete \
             --exclude='.git*' --exclude='node_modules' \
             -e "ssh -i ~/.ssh/id_ed25519 -p $SSH_PORT" \
-            wp-content/plugins/fsa-discount-panel/ \
-            "$SSH_USER@$SSH_HOST:$REMOTE_PATH/wp-content/plugins/fsa-discount-panel/"
+            wp-content/plugins/fsa-discount-panel-v2/ \
+            "$SSH_USER@$SSH_HOST:$REMOTE_PATH/wp-content/plugins/fsa-discount-panel-v2/"
 
       - name: Deploy fsahsa-sync
         env:
