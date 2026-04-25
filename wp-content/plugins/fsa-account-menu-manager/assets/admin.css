@@ -1,0 +1,108 @@
+.fsa-amm-wrap .fsa-amm-intro {
+	max-width: 760px;
+	margin: 12px 0 20px;
+	padding: 14px 18px;
+	background: #fff;
+	border-left: 4px solid #2271b1;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+.fsa-amm-wrap .fsa-amm-intro p {
+	margin: 6px 0;
+}
+
+.fsa-amm-items {
+	margin: 20px 0;
+	max-width: 1000px;
+}
+
+.fsa-amm-item {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	padding: 14px 16px;
+	margin-bottom: 8px;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-left-width: 4px;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.fsa-amm-item[data-type="endpoint"] { border-left-color: #2271b1; }
+.fsa-amm-item[data-type="page"]     { border-left-color: #00a32a; }
+.fsa-amm-item[data-type="url"]      { border-left-color: #d63638; }
+
+.fsa-amm-handle {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+.fsa-amm-handle .button {
+	padding: 0 8px;
+	min-height: 22px;
+	line-height: 20px;
+	font-size: 10px;
+}
+
+.fsa-amm-type-badge {
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #50575e;
+	background: #f0f0f1;
+	padding: 4px 8px;
+	border-radius: 3px;
+	min-width: 64px;
+	text-align: center;
+}
+
+.fsa-amm-item[data-type="endpoint"] .fsa-amm-type-badge { background: #e7f1fa; color: #2271b1; }
+.fsa-amm-item[data-type="page"]     .fsa-amm-type-badge { background: #e6f5ea; color: #00701a; }
+.fsa-amm-item[data-type="url"]      .fsa-amm-type-badge { background: #fceaea; color: #b32d2e; }
+
+.fsa-amm-fields {
+	flex: 1;
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.fsa-amm-fields label {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	flex: 1;
+	min-width: 180px;
+}
+
+.fsa-amm-fields label span {
+	font-weight: 600;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	color: #50575e;
+}
+
+.fsa-amm-fields input[type="text"],
+.fsa-amm-fields input[type="url"],
+.fsa-amm-fields select {
+	width: 100%;
+	max-width: 100%;
+}
+
+.fsa-amm-actions {
+	display: flex;
+	align-items: center;
+}
+
+.fsa-amm-add {
+	display: flex;
+	gap: 8px;
+	margin: 20px 0;
+	flex-wrap: wrap;
+}
+
+#fsa-amm-items template {
+	display: none;
+}

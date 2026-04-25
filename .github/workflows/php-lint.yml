@@ -1,0 +1,43 @@
+name: PHP Lint
+
+# -----------------------------------------------------------------------------
+# Syntax-checks every PHP file in the repo on every push and pull request.
+# Catches "white screen of death" errors before they reach staging/production.
+# -----------------------------------------------------------------------------
+
+on:
+  push:
+    branches: [main, staging]
+  pull_request:
+    branches: [main, staging]
+
+jobs:
+  lint:
+    name: PHP syntax check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP 7.4
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          tools: none
+
+      - name: Lint all PHP files
+        run: |
+          ERRORS=0
+          while IFS= read -r file; do
+            if ! php -l "$file" > /dev/null 2>&1; then
+              echo "::error file=$file::Syntax error in $file"
+              php -l "$file"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done < <(find wp-content -type f -name "*.php")
+          if [ $ERRORS -gt 0 ]; then
+            echo "::error::$ERRORS file(s) failed PHP lint"
+            exit 1
+          fi
+          echo "All PHP files passed syntax check"

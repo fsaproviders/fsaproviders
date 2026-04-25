@@ -1,0 +1,16 @@
+/*
+Theme Name:  MyListing Child
+Theme URI:   https://fsaproviders.com
+Description: Child theme for MyListing Pro on fsaproviders.com. Contains all customizations. Do not edit the parent theme.
+Author:      FSA Providers
+Author URI:  https://fsaproviders.com
+Template:    my-listing
+Version:     1.0.0
+Text Domain: mylisting-child
+*/
+
+/*
+ * Styles are loaded from assets/css/ via functions.php.
+ * This file exists for the theme header only — do not add CSS rules here.
+ * See assets/css/tokens.css and assets/css/base.css for entry points.
+ */

@@ -1,0 +1,96 @@
+/*
+ * Design tokens for FSA Providers
+ * 
+ * Central source of truth for colors, typography, spacing, and other design primitives.
+ * Populate via Claude Design's design system setup before doing CSS work in Phase 5.
+ * 
+ * Once filled in, reference these variables throughout the child theme instead of
+ * hardcoding values. That way rebranding is a single-file change.
+ */
+
+:root {
+    /* ============================================================
+       Colors — placeholder values. Replace with your brand palette.
+       ============================================================ */
+    --fsa-color-primary: #000000;
+    --fsa-color-primary-hover: #000000;
+    --fsa-color-secondary: #000000;
+    --fsa-color-accent: #000000;
+
+    --fsa-color-text: #1a1a1a;
+    --fsa-color-text-muted: #666666;
+    --fsa-color-text-inverse: #ffffff;
+
+    --fsa-color-bg: #ffffff;
+    --fsa-color-bg-alt: #f7f7f7;
+    --fsa-color-bg-dark: #1a1a1a;
+
+    --fsa-color-border: #e5e5e5;
+    --fsa-color-border-strong: #cccccc;
+
+    --fsa-color-success: #10b981;
+    --fsa-color-warning: #f59e0b;
+    --fsa-color-error: #ef4444;
+
+    /* ============================================================
+       Typography
+       ============================================================ */
+    --fsa-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --fsa-font-serif: Georgia, "Times New Roman", serif;
+    --fsa-font-mono: "SF Mono", Menlo, Monaco, Consolas, monospace;
+
+    --fsa-font-size-xs: 0.75rem;
+    --fsa-font-size-sm: 0.875rem;
+    --fsa-font-size-base: 1rem;
+    --fsa-font-size-lg: 1.125rem;
+    --fsa-font-size-xl: 1.25rem;
+    --fsa-font-size-2xl: 1.5rem;
+    --fsa-font-size-3xl: 1.875rem;
+    --fsa-font-size-4xl: 2.25rem;
+
+    --fsa-font-weight-normal: 400;
+    --fsa-font-weight-medium: 500;
+    --fsa-font-weight-semibold: 600;
+    --fsa-font-weight-bold: 700;
+
+    --fsa-line-height-tight: 1.2;
+    --fsa-line-height-normal: 1.5;
+    --fsa-line-height-relaxed: 1.75;
+
+    /* ============================================================
+       Spacing (4px base)
+       ============================================================ */
+    --fsa-space-1: 0.25rem;
+    --fsa-space-2: 0.5rem;
+    --fsa-space-3: 0.75rem;
+    --fsa-space-4: 1rem;
+    --fsa-space-5: 1.25rem;
+    --fsa-space-6: 1.5rem;
+    --fsa-space-8: 2rem;
+    --fsa-space-10: 2.5rem;
+    --fsa-space-12: 3rem;
+    --fsa-space-16: 4rem;
+
+    /* ============================================================
+       Radii, shadows, transitions
+       ============================================================ */
+    --fsa-radius-sm: 4px;
+    --fsa-radius-md: 8px;
+    --fsa-radius-lg: 12px;
+    --fsa-radius-full: 9999px;
+
+    --fsa-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --fsa-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --fsa-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+    --fsa-transition-fast: 150ms ease;
+    --fsa-transition-base: 250ms ease;
+
+    /* ============================================================
+       Layout
+       ============================================================ */
+    --fsa-container-sm: 640px;
+    --fsa-container-md: 768px;
+    --fsa-container-lg: 1024px;
+    --fsa-container-xl: 1280px;
+}
